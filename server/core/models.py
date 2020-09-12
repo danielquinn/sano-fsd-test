@@ -85,7 +85,7 @@ class Studies(BaseModel):
     researcher_email = CharField(100, default="")  # TBD shouldn't this be null instead of default "" if there is no researcher email specified? (will change this anyway)
 
 
-if os.getenv("TEST") == "True":
+if os.getenv("TEST") == "True" or os.getenv("EVOLVE_INTERACTIVE") == "False":
     db.evolve(interactive=False)
 else:
     db.evolve(interactive=True)

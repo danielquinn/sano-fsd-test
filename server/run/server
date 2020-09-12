@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# load this project's python environment
-source venv/bin/activate
-# set flask's environment to development 
+# set flask's environment to development
 export FLASK_ENV=development
 
 hashfile="requirements.md5"
